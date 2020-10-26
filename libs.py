@@ -3,7 +3,7 @@ import sys
 import time
 import os
 
-DEBUG = True
+DEBUG = False
 
 def getTimeTuple(totalTime):
     s, m, h = totalTime % 60, (totalTime // 60) % 60, (totalTime // 60 // 60)
