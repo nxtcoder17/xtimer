@@ -1,6 +1,7 @@
 import time
 import sys
 import re
+import os
 
 from libs import getPrintString, printIt
 
@@ -18,7 +19,8 @@ h, m, s = [0 if matches[x] is None else int(matches[x]) for x in range(1, len(ma
 
 totalTime = h * 60 * 60 + m * 60 + s
 
-while totalTime > 0:
+while totalTime >= 0:
     printIt(getPrintString(totalTime))
     time.sleep(1)
     totalTime -= 1
+os.system("clear")
